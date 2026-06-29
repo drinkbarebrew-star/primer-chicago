@@ -1,0 +1,11 @@
+{
+  "name": "primer-chicago",
+  "version": "1.0.0",
+  "description": "Primer Chicago — Professional house painting services in Chicago, IL",
+  "scripts": {
+    "generate": "python3 generate_site.py",
+    "dev": "npx serve public",
+    "start": "npx serve public"
+  },
+  "private": true
+}
