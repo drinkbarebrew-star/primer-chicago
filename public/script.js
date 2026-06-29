@@ -106,6 +106,16 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
+      // Telegram notification (fires immediately for speed-to-lead)
+      fetch('https://api.telegram.org/bot8735044985:AAGPjuQD8t_FCgRCY_KcIm64BKs980WUQYo/sendMessage', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          chat_id: '7046304764',
+          text: '🔔 NEW LEAD - Primer Chicago\n\nName: ' + (data.name || '') + '\nPhone: ' + (data.phone || '') + '\nEmail: ' + (data.email || '') + '\nService: ' + (data.service || 'Not specified') + '\nMessage: ' + (data.message || '')
+        })
+      }).catch(function () {});
+
       // Submit to Formspree
       var submitBtn = contactForm.querySelector('button[type="submit"]');
       var originalText = submitBtn.textContent;
