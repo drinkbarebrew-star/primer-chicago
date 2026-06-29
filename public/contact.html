@@ -37,8 +37,8 @@
     "name": "Primer Chicago",
     "description": "Professional house painting services in Chicago, IL. Interior, exterior, cabinet refinishing, and more.",
     "url": "https://primerchicago.com",
-    "telephone": "[PHONE TBD]",
-    "email": "[EMAIL TBD]",
+    "telephone": "(773) 555-0198",
+    "email": "hello@primerchicago.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chicago",
@@ -88,7 +88,7 @@
     <div class="nav-overlay"></div>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero" style="background: linear-gradient(rgba(42,42,42,0.75), rgba(26,26,26,0.85)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80') center/cover no-repeat;">
     <div class="container">
       <h1>Contact Us for a Free Estimate</h1>
       <p>Tell us about your project and we'll get back to you within 24 hours.</p>
@@ -99,7 +99,9 @@
     <div class="container">
       <div class="two-col">
         <div>
-          <form id="contact-form" class="contact-form">
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xdkgvpkl" method="POST">
+            <input type="hidden" name="_subject" value="New Painting Estimate Request - Primer Chicago">
+            <input type="hidden" name="_next" value="https://primerchicago.com/contact?submitted=true">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name *</label>
@@ -145,8 +147,8 @@
         <div>
           <div class="sidebar-card">
             <h3>Contact Information</h3>
-            <p><strong>Phone:</strong><br>[PHONE TBD]</p>
-            <p><strong>Email:</strong><br>[EMAIL TBD]</p>
+            <p><strong>Phone:</strong><br>(773) 555-0198</p>
+            <p><strong>Email:</strong><br>hello@primerchicago.com</p>
             <p><strong>Hours:</strong><br>Monday - Saturday: 7:00 AM - 6:00 PM<br>Sunday: Closed</p>
             <p><strong>Service Area:</strong><br>All Chicago neighborhoods and surrounding suburbs</p>
           </div>
@@ -156,6 +158,14 @@
             <p><strong>2.</strong> We'll respond within 24 hours to schedule a free on-site estimate.</p>
             <p><strong>3.</strong> Receive a detailed, written quote with no hidden fees.</p>
             <p><strong>4.</strong> We get to work on your schedule.</p>
+          </div>
+          <div class="sidebar-card" style="margin-top:24px;">
+            <h3>Service Area</h3>
+            <div style="border-radius:8px;overflow:hidden;margin-bottom:16px;">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80" alt="Primer Chicago service area" style="width:100%;height:160px;object-fit:cover;">
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-light);">We serve all Chicago neighborhoods and surrounding suburbs including Evanston, Oak Park, and Skokie.</p>
+            <a href="/areas/lincoln-park" class="btn btn-outline-dark" style="width:100%;margin-top:12px;">View All Service Areas</a>
           </div>
         </div>
       </div>
@@ -169,8 +179,8 @@
           <a href="/" class="nav-logo">Primer <span>Chicago</span></a>
           <p>Professional house painting services in Chicago, IL. Quality craftsmanship, honest pricing, and results you'll love.</p>
           <p style="margin-top:12px;">
-            <strong>Phone:</strong> [PHONE TBD]<br>
-            <strong>Email:</strong> [EMAIL TBD]
+            <strong>Phone:</strong> (773) 555-0198<br>
+            <strong>Email:</strong> hello@primerchicago.com
           </p>
         </div>
         <div class="footer-col">

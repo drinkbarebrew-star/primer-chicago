@@ -37,8 +37,8 @@
     "name": "Primer Chicago",
     "description": "Professional house painting services in Chicago, IL. Interior, exterior, cabinet refinishing, and more.",
     "url": "https://primerchicago.com",
-    "telephone": "[PHONE TBD]",
-    "email": "[EMAIL TBD]",
+    "telephone": "(773) 555-0198",
+    "email": "hello@primerchicago.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chicago",
@@ -88,7 +88,7 @@
     <div class="nav-overlay"></div>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero" style="background: linear-gradient(rgba(42,42,42,0.75), rgba(26,26,26,0.85)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80') center/cover no-repeat;">
     <div class="container">
       <h1>Our Project Gallery</h1>
       <p>A selection of recent painting projects across Chicago neighborhoods.</p>
@@ -97,70 +97,109 @@
 
   <section class="section">
     <div class="container">
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:40px;">
+        <button class="gallery-filter active" data-filter="all" style="padding:10px 24px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--accent);color:#fff;font-weight:600;cursor:pointer;font-family:var(--font-body);">All Projects</button>
+        <button class="gallery-filter" data-filter="interior" style="padding:10px 24px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:500;cursor:pointer;font-family:var(--font-body);">Interior</button>
+        <button class="gallery-filter" data-filter="exterior" style="padding:10px 24px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:500;cursor:pointer;font-family:var(--font-body);">Exterior</button>
+        <button class="gallery-filter" data-filter="cabinets" style="padding:10px 24px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:500;cursor:pointer;font-family:var(--font-body);">Cabinets</button>
+        <button class="gallery-filter" data-filter="commercial" style="padding:10px 24px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:500;cursor:pointer;font-family:var(--font-body);">Commercial</button>
+        <button class="gallery-filter" data-filter="before-after" style="padding:10px 24px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:500;cursor:pointer;font-family:var(--font-body);">Before &amp; After</button>
+      </div>
       <div class="gallery-grid">
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>Lincoln Park Greystone</h3>
-          <p>Exterior Painting &mdash; Full exterior repaint — trim, porch, and window frames</p>
+        <!-- Interior -->
+        <div class="gallery-item fade-in" data-category="interior">
+          <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&q=80" alt="Modern living room interior painting in Lincoln Park, Chicago" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Lincoln Park Living Room</h3><p>Interior Painting &mdash; Warm neutral palette with accent wall</p></div>
         </div>
-      </div>
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>Bucktown Kitchen Cabinets</h3>
-          <p>Cabinet Refinishing &mdash; Oak to white cabinet refinishing with spray finish</p>
+        <div class="gallery-item fade-in" data-category="interior">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Open concept living space painting in Lakeview, Chicago" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Lakeview Open Concept</h3><p>Interior Painting &mdash; Full interior with ceiling and trim work</p></div>
         </div>
-      </div>
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>West Loop Loft Interior</h3>
-          <p>Interior Painting &mdash; 3,200 sq ft loft — walls, ceilings, and exposed beam accents</p>
+        <div class="gallery-item fade-in" data-category="interior">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80" alt="Modern kitchen interior in Logan Square" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Logan Square Modern Kitchen</h3><p>Interior Painting &mdash; Kitchen walls and ceiling refresh</p></div>
         </div>
-      </div>
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>Ravenswood Bungalow Exterior</h3>
-          <p>Exterior Painting &mdash; Complete exterior including siding, trim, and front porch</p>
+        <div class="gallery-item fade-in" data-category="interior">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Bathroom painting in Gold Coast condo" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Gold Coast Condo Bathroom</h3><p>Interior Painting &mdash; Moisture-resistant finish with premium paint</p></div>
         </div>
-      </div>
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>Wicker Park Victorian Trim</h3>
-          <p>Exterior Painting &mdash; Detailed trim restoration and repaint on 1890s Victorian</p>
+        <div class="gallery-item fade-in" data-category="interior">
+          <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=600&q=80" alt="Bedroom accent wall painting in Wicker Park" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Wicker Park Bedroom</h3><p>Interior Painting &mdash; Bold accent wall with coordinating trim</p></div>
         </div>
-      </div>
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>Logan Square Living Room</h3>
-          <p>Interior Painting &mdash; Accent wall and ceiling repaint with color consultation</p>
+        <!-- Exterior -->
+        <div class="gallery-item fade-in" data-category="exterior">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Exterior home painting in Wicker Park, Chicago" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Wicker Park Victorian</h3><p>Exterior Painting &mdash; Full exterior repaint with trim detail work</p></div>
         </div>
-      </div>
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>Gold Coast Condo</h3>
-          <p>Interior Painting &mdash; Luxury condo interior — specialty finishes and premium paints</p>
+        <div class="gallery-item fade-in" data-category="exterior">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" alt="Home exterior painting in Ravenswood" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Ravenswood Bungalow</h3><p>Exterior Painting &mdash; Complete exterior including siding and porch</p></div>
         </div>
-      </div>
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>Andersonville Storefront</h3>
-          <p>Commercial Painting &mdash; Full storefront repaint for a Clark Street boutique</p>
+        <div class="gallery-item fade-in" data-category="exterior">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Greystone exterior in Lincoln Park" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Lincoln Park Greystone</h3><p>Exterior Painting &mdash; Trim, porch, and window frame restoration</p></div>
         </div>
-      </div>
-      <div class="gallery-item fade-in">
-        <div class="gallery-placeholder">Project Photo</div>
-        <div class="gallery-item-info">
-          <h3>Lakeview Deck Restoration</h3>
-          <p>Deck Staining &mdash; Cedar deck strip, clean, and re-stain</p>
+        <div class="gallery-item fade-in" data-category="exterior">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Andersonville home exterior" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Andersonville Two-Flat</h3><p>Exterior Painting &mdash; Two-tone exterior with accent shutters</p></div>
         </div>
-      </div>
+        <div class="gallery-item fade-in" data-category="exterior">
+          <img src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=800&q=80" alt="Deck staining project in Chicago" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Bucktown Deck Restoration</h3><p>Deck Staining &mdash; Cedar deck strip, sand, and restain</p></div>
+        </div>
+        <!-- Cabinets -->
+        <div class="gallery-item fade-in" data-category="cabinets">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Kitchen cabinet refinishing in Bucktown" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Bucktown Kitchen Cabinets</h3><p>Cabinet Refinishing &mdash; Oak to white spray finish</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-category="cabinets">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80" alt="Modern cabinet painting in West Loop" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>West Loop Kitchen Refresh</h3><p>Cabinet Refinishing &mdash; Two-tone upper and lower cabinets</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-category="cabinets">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Cabinet refinishing in Logan Square" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Logan Square Cabinet Makeover</h3><p>Cabinet Refinishing &mdash; Dark stain to bright white transformation</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-category="cabinets">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=80" alt="Painted bathroom vanity in Lakeview" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Lakeview Bathroom Vanity</h3><p>Cabinet Refinishing &mdash; Bathroom vanity repaint with new hardware</p></div>
+        </div>
+        <!-- Commercial -->
+        <div class="gallery-item fade-in" data-category="commercial">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Commercial office painting in West Loop, Chicago" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>West Loop Office Suite</h3><p>Commercial Painting &mdash; 8,000 sq ft office renovation</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-category="commercial">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Commercial storefront painting in Andersonville" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>Andersonville Storefront</h3><p>Commercial Painting &mdash; Full storefront repaint for Clark Street boutique</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-category="commercial">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=80" alt="Restaurant interior painting in River North" loading="lazy" style="width:100%;height:240px;object-fit:cover;">
+          <div class="gallery-item-info"><h3>River North Restaurant</h3><p>Commercial Painting &mdash; Evening and weekend painting for minimal disruption</p></div>
+        </div>
+        <!-- Before & After -->
+        <div class="gallery-item fade-in" data-category="before-after" style="grid-column:span 2;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;position:relative;">
+            <div style="position:relative;"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Before: home exterior needing paint" style="width:100%;height:240px;object-fit:cover;filter:sepia(0.3) brightness(0.85);"><span style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.6);color:#fff;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:600;">BEFORE</span></div>
+            <div style="position:relative;"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="After: freshly painted home exterior" style="width:100%;height:240px;object-fit:cover;"><span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:600;">AFTER</span></div>
+          </div>
+          <div class="gallery-item-info"><h3>Wicker Park Victorian - Full Exterior</h3><p>Before &amp; After &mdash; Complete exterior restoration with custom color scheme</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-category="before-after" style="grid-column:span 2;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;position:relative;">
+            <div style="position:relative;"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Before: dated interior room" style="width:100%;height:240px;object-fit:cover;filter:sepia(0.3) brightness(0.85);"><span style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.6);color:#fff;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:600;">BEFORE</span></div>
+            <div style="position:relative;"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=600&q=80" alt="After: beautifully painted modern interior" style="width:100%;height:240px;object-fit:cover;"><span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:600;">AFTER</span></div>
+          </div>
+          <div class="gallery-item-info"><h3>Lincoln Park Condo - Complete Interior</h3><p>Before &amp; After &mdash; Full interior transformation with accent walls</p></div>
+        </div>
+        <div class="gallery-item fade-in" data-category="before-after" style="grid-column:span 2;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;position:relative;">
+            <div style="position:relative;"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Before: dated kitchen cabinets" style="width:100%;height:240px;object-fit:cover;filter:sepia(0.3) brightness(0.85);"><span style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.6);color:#fff;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:600;">BEFORE</span></div>
+            <div style="position:relative;"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80" alt="After: beautifully refinished kitchen cabinets" style="width:100%;height:240px;object-fit:cover;"><span style="position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;padding:4px 12px;border-radius:4px;font-size:0.8rem;font-weight:600;">AFTER</span></div>
+          </div>
+          <div class="gallery-item-info"><h3>Bucktown Kitchen - Cabinet Refinishing</h3><p>Before &amp; After &mdash; Oak cabinets transformed with professional spray finish</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -180,8 +219,8 @@
           <a href="/" class="nav-logo">Primer <span>Chicago</span></a>
           <p>Professional house painting services in Chicago, IL. Quality craftsmanship, honest pricing, and results you'll love.</p>
           <p style="margin-top:12px;">
-            <strong>Phone:</strong> [PHONE TBD]<br>
-            <strong>Email:</strong> [EMAIL TBD]
+            <strong>Phone:</strong> (773) 555-0198<br>
+            <strong>Email:</strong> hello@primerchicago.com
           </p>
         </div>
         <div class="footer-col">
@@ -223,5 +262,27 @@
   </footer>
 
   <script src="/script.js"></script>
+  <script>
+document.querySelectorAll('.gallery-filter').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.gallery-filter').forEach(function(b) {
+      b.classList.remove('active');
+      b.style.background = 'var(--white)';
+      b.style.color = 'var(--text)';
+    });
+    btn.classList.add('active');
+    btn.style.background = 'var(--accent)';
+    btn.style.color = '#fff';
+    var filter = btn.getAttribute('data-filter');
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
+      if (filter === 'all' || item.getAttribute('data-category') === filter) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>

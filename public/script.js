@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---- Contact Form Handler ----
+  // ---- Contact Form Handler (Formspree) ----
   var contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -106,18 +106,30 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      // Simulate submission
+      // Submit to Formspree
       var submitBtn = contactForm.querySelector('button[type="submit"]');
       var originalText = submitBtn.textContent;
       submitBtn.textContent = 'Sending...';
       submitBtn.disabled = true;
 
-      setTimeout(function () {
-        showFormMessage('Thank you! We\'ll get back to you within 24 hours.', 'success');
-        contactForm.reset();
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          showFormMessage('Thank you! We\'ll get back to you within 24 hours.', 'success');
+          contactForm.reset();
+        } else {
+          showFormMessage('Something went wrong. Please call us at (773) 555-0198.', 'error');
+        }
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-      }, 1200);
+      }).catch(function () {
+        showFormMessage('Connection error. Please call us at (773) 555-0198.', 'error');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      });
     });
   }
 
