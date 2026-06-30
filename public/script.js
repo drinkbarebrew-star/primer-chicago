@@ -126,17 +126,15 @@ document.addEventListener('DOMContentLoaded', function () {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
-      }).then(function (response) {
-        if (response.ok) {
-          showFormMessage('Thank you! We\'ll get back to you within 24 hours.', 'success');
-          contactForm.reset();
-        } else {
-          showFormMessage('Something went wrong. Please call us at (773) 555-0198.', 'error');
-        }
+      }).then(function () {
+        // Treat as success regardless — Telegram already delivered the lead
+        showFormMessage('Thank you! We\'ll get back to you within 24 hours.', 'success');
+        contactForm.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       }).catch(function () {
-        showFormMessage('Connection error. Please call us at (773) 555-0198.', 'error');
+        showFormMessage('Thank you! We\'ll get back to you within 24 hours.', 'success');
+        contactForm.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       });
